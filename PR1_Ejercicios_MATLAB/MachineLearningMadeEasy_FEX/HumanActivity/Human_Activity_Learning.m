@@ -106,13 +106,16 @@ T_mean = varfun(@Wmean, rawSensorDataTest);
 T_stdv = varfun(@Wstd,rawSensorDataTest);
 T_pca  = varfun(@Wpca1,rawSensorDataTest);
 
+%humanActivityData = [T_mean];
 humanActivityData = [T_mean, T_stdv, T_pca];
 humanActivityData.activity = testActivity;
 
 % Step 3: Use trained model to predict activity on new sensor data
 % Make sure that you've exported 'trainedClassifier' from
 % ClassificationLearner
-plotActivityResults(trainedClassifier,rawSensorDataTest,humanActivityData,0.1)
+%plotActivityResultsWmean(trainedModel,rawSensorDataTest,humanActivityData,0.1)
+plotActivityResults2(trainedModel1,rawSensorDataTest,humanActivityData)
+
 
 %%
 % 

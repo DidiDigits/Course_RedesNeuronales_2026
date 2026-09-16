@@ -1,0 +1,19 @@
+Session: untitled,,,,,
+Training Data: humanActivityData    Observations: 7352,,,,,
+"Predictors: 6    Predictor Names: Wmean_total_acc_x_train, Wmean_total_acc_y_train, Wmean_total_acc_z_train, Wmean_body_gyro_x_train, Wmean_body_gyro_y_train, Wmean_body_gyro_z_train",,,,,
+"Response Name: activity    Response Classes: 5    Response Class Names: Laying, Sitting, ClimbingStairs, Standing, Walking",,,,,
+Validation: 5-fold cross-validation,,,,,
+,,,,,
+,,,,,
+Favorite,Model Number,Model Type,Status,Accuracy % (Validation),Total Cost (Validation)
+0,1,Tree,Trained,81.3248095756257,1373
+0,2,SVM,Trained,64.1866158868335,2633
+0,3,Tree,Trained,78.1692056583243,1605
+0,4,SVM,Trained,78.9581066376496,1547
+0,5,Efficient Logistic Regression,Trained,36.860718171926,4642
+0,6.1,KNN,Trained,82.6169749727965,1278
+0,6.2,KNN,Trained,83.7187159956474,1197
+0,6.3,KNN,Trained,76.5097932535365,1727
+0,6.4,KNN,Trained,83.3650707290533,1223
+0,6.5,KNN,Trained,83.0386289445049,1247
+0,6.6,KNN,Trained,84.6300326441785,1130

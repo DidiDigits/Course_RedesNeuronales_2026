@@ -1,0 +1,16 @@
+Session: untitled,,,,,
+Training Data: humanActivityData    Observations: 7352,,,,,
+"Predictors: 18    Predictor Names: Wmean_total_acc_x_train, Wmean_total_acc_y_train, Wmean_total_acc_z_train, Wmean_body_gyro_x_train, Wmean_body_gyro_y_train, Wmean_body_gyro_z_train, Wstd_total_acc_x_train, Wstd_total_acc_y_train, Wstd_total_acc_z_train, Wstd_body_gyro_x_train, Wstd_body_gyro_y_train, Wstd_body_gyro_z_train, Wpca1_total_acc_x_train, Wpca1_total_acc_y_train, Wpca1_total_acc_z_train, Wpca1_body_gyro_x_train, Wpca1_body_gyro_y_train, Wpca1_body_gyro_z_train",,,,,
+"Response Name: activity    Response Classes: 5    Response Class Names: Laying, Sitting, ClimbingStairs, Standing, Walking",,,,,
+Validation: 5-fold cross-validation,,,,,
+,,,,,
+,,,,,
+Favorite,Model Number,Model Type,Status,Accuracy % (Validation),Total Cost (Validation)
+0,1,Tree,Trained,93.0903155603917,508
+0,2,Tree,Trained,89.5130576713819,771
+0,3,Discriminant,Trained,89.7714907508161,752
+0,4,Discriminant,Trained,84.30359085963,1154
+0,5,SVM,Trained,89.785092491839,751
+0,6,SVM,Trained,94.6001088139282,397
+0,7,KNN,Trained,95.0081610446137,367
+0,8,KNN,Trained,93.7568008705114,459

@@ -46,32 +46,36 @@ ann2 = annotation(fig,'textbox',[ax1.Position(1) ax1.Position(2)+0.04 ax1.Positi
 
 %% Loop through the raw data and plot the sensor values
 try
-for ii = 600:height(humanActivityTest)
-    
-    activity = predict(mdl,humanActivityTest{ii,1:end-1});
+    for ii = 600:height(humanActivityTest)
+        
+        activity = mdl.predictFcn(humanActivityTest(ii,1:end-1));
 
-    if activity == humanActivityTest.activity(ii)
-        predclr = [0 0.7 0.3];
-    else
-        predclr = [1 0 0];
+        if activity == humanActivityTest.activity(ii)
+            predclr = [0 0.7 0.3];
+        else
+            predclr = [1 0 0];
+        end
+
+        set(ann1,'String',['Predicted Activity   : ' char(activity)],...
+            'BackgroundColor',predclr);
+        set(ann2,'String',['Actual Activity        : ' char(humanActivityTest.activity(ii))],...
+            'BackgroundColor',[0 0.7 0.3]);
+
+        L(1).YData = g*rawSensorDataTest.total_acc_x_test(ii,:);
+        L(2).YData = g*rawSensorDataTest.total_acc_y_test(ii,:);
+        L(3).YData = g*rawSensorDataTest.total_acc_z_test(ii,:);
+
+        L(4).YData = rawSensorDataTest.body_gyro_x_test(ii,:);
+        L(5).YData = rawSensorDataTest.body_gyro_y_test(ii,:);
+        L(6).YData = rawSensorDataTest.body_gyro_z_test(ii,:);
+
+        drawnow
+        pause(delay)
     end
-	set(ann1,'String',['Predicted Activity   : ' char(activity)],...
-        'BackgroundColor',predclr);
-    set(ann2,'String',['Actual Activity        : ' char(humanActivityTest.activity(ii))],...
-        'BackgroundColor',[0 0.7 0.3]);
-    
-    L(1).YData = g*rawSensorDataTest.total_acc_x_test(ii,:);
-    L(2).YData = g*rawSensorDataTest.total_acc_y_test(ii,:);
-    L(3).YData = g*rawSensorDataTest.total_acc_z_test(ii,:);
 
-	L(4).YData =   rawSensorDataTest.body_gyro_x_test(ii,:);
-    L(5).YData =   rawSensorDataTest.body_gyro_y_test(ii,:);
-    L(6).YData =   rawSensorDataTest.body_gyro_z_test(ii,:);
-
-    drawnow
-    pause(delay)
-end
 catch err
+    fprintf('Error en la iteración %d:\n', ii);
+    disp(err.message);
 end
 
 function cname = getClassifierName(trainedClassifier)
