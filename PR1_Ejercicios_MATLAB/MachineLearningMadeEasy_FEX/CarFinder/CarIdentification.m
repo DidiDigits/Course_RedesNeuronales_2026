@@ -37,7 +37,7 @@ CarData.carType = getImageLabels(imset);
 classificationLearner
 
 %% Test Trained Model
-CarFinderLive(trainedClassifier,bag)
+CarFinderLive(trainedModel,bag)
 
 %% Compare multiple classifiers
 CarFinderLiveCompare(trainedClassifier,trainedClassifier1,bag)

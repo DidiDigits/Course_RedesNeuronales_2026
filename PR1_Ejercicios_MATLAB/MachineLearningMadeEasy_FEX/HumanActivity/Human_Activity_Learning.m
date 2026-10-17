@@ -91,31 +91,47 @@ classificationLearner
 % <<classificationLearner.png>>
 % 
 
+
 %% Load Test Data
 load rawSensorData_test
 
-%% Visualize classifier performance on test data
-%
-% Step 1: Create a table
+%% Create test data table
+% Use the same variable names as those used during training
 rawSensorDataTest = table(...
     total_acc_x_test, total_acc_y_test, total_acc_z_test, ...
-    body_gyro_x_test, body_gyro_y_test, body_gyro_z_test);
+    body_gyro_x_test, body_gyro_y_test, body_gyro_z_test, ...
+    'VariableNames', { ...
+    'total_acc_x_train', ...
+    'total_acc_y_train', ...
+    'total_acc_z_train', ...
+    'body_gyro_x_train', ...
+    'body_gyro_y_train', ...
+    'body_gyro_z_train'});
 
-% Step 2: Extract features from raw sensor data
+%% Extract test features
 T_mean = varfun(@Wmean, rawSensorDataTest);
-T_stdv = varfun(@Wstd,rawSensorDataTest);
-T_pca  = varfun(@Wpca1,rawSensorDataTest);
+T_stdv = varfun(@Wstd,  rawSensorDataTest);
+T_pca  = varfun(@Wpca1, rawSensorDataTest);
 
-%humanActivityData = [T_mean];
 humanActivityData = [T_mean, T_stdv, T_pca];
+
+% True test labels
 humanActivityData.activity = testActivity;
 
-% Step 3: Use trained model to predict activity on new sensor data
-% Make sure that you've exported 'trainedClassifier' from
-% ClassificationLearner
-%plotActivityResultsWmean(trainedModel,rawSensorDataTest,humanActivityData,0.1)
-plotActivityResults2(trainedModel1,rawSensorDataTest,humanActivityData)
+%% Predict test activities
+X_test = removevars(humanActivityData, 'activity');
+y_test = humanActivityData.activity;
 
+y_pred = trainedModel1.predictFcn(X_test);
+
+%% Test accuracy
+testAccuracy = mean(y_pred == y_test) * 100;
+
+fprintf('Test accuracy: %.2f%%\n', testAccuracy);
+
+%% Confusion matrix
+figure;
+confusionchart(y_test, y_pred);
 
 %%
 % 
