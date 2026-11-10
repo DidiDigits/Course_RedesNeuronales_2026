@@ -1,0 +1,40 @@
+{
+ "XGBoost": {
+  "params": {
+   "learning_rate": 0.03,
+   "max_depth": 2,
+   "n_estimators": 100
+  },
+  "combinaciones": 12,
+  "RMSE_val": 29.5721,
+  "MAE_val": 16.6502,
+  "t_rejilla_s": 0.437,
+  "t_ajuste_s": 0.02
+ },
+ "SVR": {
+  "params": {
+   "regressor__svr__C": 10,
+   "regressor__svr__epsilon": 0.3,
+   "regressor__svr__gamma": 0.01
+  },
+  "combinaciones": 27,
+  "RMSE_val": 30.2742,
+  "MAE_val": 17.3059,
+  "t_rejilla_s": 0.413,
+  "t_ajuste_s": 0.024
+ },
+ "Random Forest": {
+  "params": {
+   "max_depth": 3,
+   "min_samples_leaf": 1,
+   "n_estimators": 500
+  },
+  "combinaciones": 12,
+  "RMSE_val": 29.8331,
+  "MAE_val": 16.9529,
+  "t_rejilla_s": 2.571,
+  "t_ajuste_s": 0.275
+ },
+ "elegido_en_validacion": "XGBoost",
+ "n_validacion": 155
+}

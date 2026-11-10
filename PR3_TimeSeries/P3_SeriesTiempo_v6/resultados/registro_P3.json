@@ -1,0 +1,405 @@
+{
+ "etapa1_entorno": {
+  "entorno": "Jupyter local",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scikit-learn": "1.9.1",
+  "xgboost": "3.4.1",
+  "matplotlib": "3.11.2",
+  "seaborn": "0.13.2",
+  "statsmodels": "0.15.0",
+  "scipy": "1.18.1"
+ },
+ "etapa1_fase0": {
+  "gpu_disponible": false,
+  "dispositivo": "cpu"
+ },
+ "etapa1": {
+  "filas_csv": 145366,
+  "columnas_csv": 2,
+  "repetidas": 4,
+  "repetidas_fechas": [
+   "2014-11-02 02:00",
+   "2015-11-01 02:00",
+   "2016-11-06 02:00",
+   "2017-11-05 02:00"
+  ],
+  "horas_faltantes": 30,
+  "menores_19000": 15,
+  "menores_19000_desde": "2012-10-29 23:00:00",
+  "menores_19000_hasta": "2012-10-31 05:00:00",
+  "n_train": 113925,
+  "n_test": 31437,
+  "A_arboles_usados": 953,
+  "A_rondas": 1000,
+  "A_t_s": 0.92,
+  "A_rmse": 3722.83,
+  "B_arboles_usados": 381,
+  "B_rondas": 431,
+  "B_rmse": 3712.7,
+  "C_arboles_elegidos": 959,
+  "C_rondas_seleccion": 1000,
+  "C_rmse_val": 3483.41,
+  "C_rmse": 3723.19,
+  "rmse_barajado": 3192.1,
+  "n_barajado": 31437,
+  "importancia": {
+   "year": 0.025100000202655792,
+   "quarter": 0.049800001084804535,
+   "dayofyear": 0.12639999389648438,
+   "dayofweek": 0.16850000619888306,
+   "hour": 0.31049999594688416,
+   "month": 0.3197000026702881
+  },
+  "n_tabla_C": 31429,
+  "tabla_C": {
+   "XGBoost · Réplica A (video)": {
+    "n": 31429.0,
+    "MaxErr": 18880.2324,
+    "MAE": 2898.589,
+    "MSE": 13861185.4072,
+    "RSS": 435643196164.0844,
+    "RMSE": 3723.0613,
+    "R2": 0.6668,
+    "MAPE_%": 9.1497,
+    "MedAE": 2322.2676
+   },
+   "XGBoost · Réplica B (en pantalla)": {
+    "n": 31429.0,
+    "MaxErr": 20589.5078,
+    "MAE": 2750.4651,
+    "MSE": 13786127.1408,
+    "RSS": 433284189908.44,
+    "RMSE": 3712.9674,
+    "R2": 0.6686,
+    "MAPE_%": 8.4892,
+    "MedAE": 1987.5742
+   },
+   "Perfil de calendario": {
+    "n": 31429.0,
+    "MaxErr": 16572.5636,
+    "MAE": 3016.8052,
+    "MSE": 14469083.9921,
+    "RSS": 454748840787.3007,
+    "RMSE": 3803.8249,
+    "R2": 0.6521,
+    "MAPE_%": 9.7071,
+    "MedAE": 2532.1579
+   },
+   "Ingenuo 24 h": {
+    "n": 31429.0,
+    "MaxErr": 21131.0,
+    "MAE": 2209.3613,
+    "MSE": 9153325.3406,
+    "RSS": 287679862129.0,
+    "RMSE": 3025.4463,
+    "R2": 0.7799,
+    "MAPE_%": 6.9633,
+    "MedAE": 1595.0
+   },
+   "Ingenuo 168 h": {
+    "n": 31429.0,
+    "MaxErr": 22067.0,
+    "MAE": 3400.3918,
+    "MSE": 21582492.1329,
+    "RSS": 678316145246.0,
+    "RMSE": 4645.6961,
+    "R2": 0.4811,
+    "MAPE_%": 10.5396,
+    "MedAE": 2522.0
+   }
+  },
+  "C_metricas": {
+   "n": 31437,
+   "MaxErr": 18887.3984,
+   "MAE": 2898.1056,
+   "MSE": 13862168.5437,
+   "RSS": 435784992507.9102,
+   "RMSE": 3723.1933,
+   "R2": 0.6667,
+   "MAPE_%": 9.1473,
+   "MedAE": 2322.791
+  },
+  "peor_dia": "2016-08-13",
+  "peor_dia_error": 12726.5
+ },
+ "etapa1_duracion_min": 20.35,
+ "etapa2_entorno": {
+  "entorno": "Jupyter local",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scikit-learn": "1.9.1",
+  "xgboost": "3.4.1",
+  "matplotlib": "3.11.2",
+  "seaborn": "0.13.2",
+  "statsmodels": "0.15.0",
+  "scipy": "1.18.1"
+ },
+ "etapa2": {
+  "md5": "79db93f4acdb00dee34cdd85c70d62ad",
+  "forma_archivo": [
+   95,
+   13
+  ],
+  "anios": 95,
+  "anios_ausentes": [
+   1931,
+   1937,
+   1938
+  ],
+  "periodo": [
+   "1939-01",
+   "2026-04"
+  ],
+  "meses": 1048,
+  "faltantes": [
+   "1949-03",
+   "1949-04",
+   "1949-05",
+   "1986-08",
+   "2014-04"
+  ],
+  "ceros": 289,
+  "fraccion_ceros": 0.2771,
+  "maximo_mm": 315.22,
+  "fecha_maximo": "1993-01",
+  "media_mm": 18.8356,
+  "mediana_mm": 3.7,
+  "por_mes": {
+   "ENE": {
+    "media_mm": 43.64,
+    "mediana_mm": 27.4,
+    "q3_mm": 69.82,
+    "fraccion_ceros": 0.02
+   },
+   "FEB": {
+    "media_mm": 43.41,
+    "mediana_mm": 28.31,
+    "q3_mm": 66.94,
+    "fraccion_ceros": 0.02
+   },
+   "MAR": {
+    "media_mm": 39.22,
+    "mediana_mm": 27.7,
+    "q3_mm": 57.7,
+    "fraccion_ceros": 0.03
+   },
+   "ABR": {
+    "media_mm": 16.35,
+    "mediana_mm": 8.6,
+    "q3_mm": 25.2,
+    "fraccion_ceros": 0.08
+   },
+   "MAY": {
+    "media_mm": 4.56,
+    "mediana_mm": 0.55,
+    "q3_mm": 4.68,
+    "fraccion_ceros": 0.31
+   },
+   "JUN": {
+    "media_mm": 0.59,
+    "mediana_mm": 0.0,
+    "q3_mm": 0.5,
+    "fraccion_ceros": 0.63
+   },
+   "JUL": {
+    "media_mm": 0.81,
+    "mediana_mm": 0.0,
+    "q3_mm": 0.5,
+    "fraccion_ceros": 0.68
+   },
+   "AGO": {
+    "media_mm": 2.31,
+    "mediana_mm": 0.0,
+    "q3_mm": 0.2,
+    "fraccion_ceros": 0.67
+   },
+   "SEP": {
+    "media_mm": 4.0,
+    "mediana_mm": 0.01,
+    "q3_mm": 3.25,
+    "fraccion_ceros": 0.47
+   },
+   "OCT": {
+    "media_mm": 10.0,
+    "mediana_mm": 1.4,
+    "q3_mm": 9.1,
+    "fraccion_ceros": 0.25
+   },
+   "NOV": {
+    "media_mm": 23.07,
+    "mediana_mm": 13.83,
+    "q3_mm": 28.5,
+    "fraccion_ceros": 0.13
+   },
+   "DIC": {
+    "media_mm": 37.12,
+    "mediana_mm": 25.2,
+    "q3_mm": 52.65,
+    "fraccion_ceros": 0.02
+   }
+  },
+  "extremos_tukey": 96,
+  "extremos_por_mes": {
+   "ENE": 2,
+   "FEB": 2,
+   "MAR": 2,
+   "ABR": 3,
+   "MAY": 8,
+   "JUN": 13,
+   "JUL": 11,
+   "AGO": 20,
+   "SEP": 11,
+   "OCT": 11,
+   "NOV": 8,
+   "DIC": 5
+  },
+  "dos_decimales": 151,
+  "prop_dos_decimales_antes_2000": 0.0412,
+  "prop_dos_decimales_desde_2000": 0.3841,
+  "imputados": 5,
+  "valores_imputados_mm": {
+   "1949-03": 24.5,
+   "1949-04": 6.4,
+   "1949-05": 0.0,
+   "1986-08": 0.0,
+   "2014-04": 10.76
+  },
+  "filas_con_caracteristicas": 1036,
+  "filas_descartadas_imputadas": 5,
+  "filas_supervisadas": 1031,
+  "fin_desarrollo": "2013-04",
+  "inicio_prueba": "2013-05",
+  "acf1_desarrollo": 0.3372,
+  "acf12_desarrollo": 0.2571,
+  "correlaciones_desarrollo": {
+   "mes_cos": 0.3913,
+   "lag_1": 0.3349,
+   "mes_sin": 0.3241,
+   "lag_12": 0.2572,
+   "media_3": 0.2196,
+   "lag_2": 0.1603,
+   "media_12": 0.0503,
+   "lag_3": -0.0211
+  },
+  "r2_media_correcta": 0.1143,
+  "r2_media_con_fuga": 0.8442,
+  "n_tramo_fuga": 132
+ },
+ "etapa2_duracion_min": 20.43,
+ "etapa3_entorno": {
+  "entorno": "Jupyter local",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scikit-learn": "1.9.1",
+  "xgboost": "3.4.1",
+  "matplotlib": "3.11.2",
+  "seaborn": "0.13.2",
+  "statsmodels": "0.15.0",
+  "scipy": "1.18.1"
+ },
+ "etapa3": {
+  "particion": {
+   "entrenamiento": {
+    "n": 721,
+    "desde": "1940-01",
+    "hasta": "2000-05"
+   },
+   "validación": {
+    "n": 155,
+    "desde": "2000-06",
+    "hasta": "2013-04"
+   },
+   "prueba": {
+    "n": 155,
+    "desde": "2013-05",
+    "hasta": "2026-04"
+   }
+  },
+  "n_desarrollo": 876,
+  "r2_rf_temporal": 0.1291,
+  "r2_rf_barajado_media": 0.0999,
+  "r2_rf_barajado_de": 0.0882,
+  "r2_rf_barajado_min": -0.153,
+  "r2_rf_barajado_max": 0.29,
+  "barajado_alguno_supera": true,
+  "barajado_todos_superan": false,
+  "tabla_F": {
+   "Ingenuo": {
+    "n": 155,
+    "RMSE_val": 40.287,
+    "MAE_val": 21.435,
+    "R2_val": -0.444
+   },
+   "Ingenuo estacional": {
+    "n": 155,
+    "RMSE_val": 41.141,
+    "MAE_val": 21.289,
+    "R2_val": -0.505
+   },
+   "Climatología": {
+    "n": 155,
+    "RMSE_val": 28.751,
+    "MAE_val": 15.811,
+    "R2_val": 0.265
+   }
+  }
+ },
+ "etapa3_duracion_min": 9.88,
+ "etapa4_entorno": {
+  "entorno": "Jupyter local",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scikit-learn": "1.9.1",
+  "xgboost": "3.4.1",
+  "matplotlib": "3.11.2",
+  "seaborn": "0.13.2",
+  "statsmodels": "0.15.0",
+  "scipy": "1.18.1"
+ },
+ "etapa4": {
+  "XGBoost": {
+   "params": {
+    "learning_rate": 0.03,
+    "max_depth": 2,
+    "n_estimators": 100
+   },
+   "combinaciones": 12,
+   "RMSE_val": 29.5721,
+   "MAE_val": 16.6502,
+   "t_rejilla_s": 0.437,
+   "t_ajuste_s": 0.02
+  },
+  "SVR": {
+   "params": {
+    "regressor__svr__C": 10,
+    "regressor__svr__epsilon": 0.3,
+    "regressor__svr__gamma": 0.01
+   },
+   "combinaciones": 27,
+   "RMSE_val": 30.2742,
+   "MAE_val": 17.3059,
+   "t_rejilla_s": 0.413,
+   "t_ajuste_s": 0.024
+  },
+  "Random Forest": {
+   "params": {
+    "max_depth": 3,
+    "min_samples_leaf": 1,
+    "n_estimators": 500
+   },
+   "combinaciones": 12,
+   "RMSE_val": 29.8331,
+   "MAE_val": 16.9529,
+   "t_rejilla_s": 2.571,
+   "t_ajuste_s": 0.275
+  },
+  "elegido_en_validacion": "XGBoost",
+  "n_validacion": 155
+ },
+ "etapa4_duracion_min": 18.53
+}

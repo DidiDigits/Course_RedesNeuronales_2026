@@ -1,0 +1,138 @@
+===============================================================================
+ UNIVERSIDAD AUTONOMA DE BAJA CALIFORNIA  -  FIAD  -  Ensenada
+ 3201 Modelos Inteligentes de Aprendizaje / 529 Redes Neuronales Modulares
+ Maestria y Doctorado en Ciencias e Ingenieria (MyDCI)  -  Ciclo 2026-2
+-------------------------------------------------------------------------------
+ PRACTICA 3 - Pronostico de series de tiempo con machine learning
+ Google Colab, JupyterHub del laboratorio o Jupyter local - DURACION: 2 h
+ + componente extraclase de ~10 h en 1-2 semanas
+ Elaboraron: Dr. Everardo Inzunza Gonzalez - Dr. Enrique Efren Garcia
+ Guerrero - Dr. Oscar Adrian Aguirre Castro
+===============================================================================
+
+LEEME ANTES DE LA SESION
+
+1. DE QUE SE TRATA
+   - Reproduces el video de Rob Mulla: XGBoost para pronosticar el consumo
+     electrico horario de PJM East, y encuentras una fuga de informacion
+     que el video no ve.
+   - Mides tus modelos con las metricas del video de Codigo Maquina (MAE,
+     MSE, RMSE, R2, RSS, error maximo) y con dos que exige el pronostico:
+     MASE y habilidad frente a la climatologia.
+   - Pronosticas la lluvia mensual de la estacion 2038 Presa Rodriguez
+     (Tijuana) con XGBoost, SVR y Random Forest, y los comparas contra
+     tres lineas base, entre ellas "este mes sera un mes tipico".
+   - En el extraclase: validacion cruzada temporal, prueba de
+     Diebold-Mariano, tu propia serie y la auditoria de la cifra de un
+     articulo publicado (se califica la medicion, no la coincidencia).
+
+2. LO NUEVO EN ESTA VERSION (v6)
+   - El codigo ya no esta dentro del manual: son SEIS cuadernos, uno por
+     etapa, con comentarios por bloque y a la derecha de cada instruccion.
+   - El primer cuaderno es el del video. Las metricas siguen el segundo.
+   - El manual trae tablas vacias para tus cifras y casillas con pie listo
+     para pegar tus figuras.
+
+3. HAZ ESTO ANTES DE LLEGAR
+   [ ] Descomprime P3_SeriesTiempo_v6.zip COMPLETO (carpetas notebooks/ y
+       datos/ incluidas). No lo abras "por partes".
+   [ ] Si usaras Colab: sube la carpeta P3_SeriesTiempo_v6 a "Mi unidad"
+       de Google Drive, abre P3_E1_... con doble clic -> "Abrir con Google
+       Colaboratory" y corre el Bloque 0 una vez para autorizar Drive.
+   [ ] Si usaras tu laptop: Python 3.11 o superior y corre el Bloque 0 de
+       P3_E1 en casa; instala lo que falte ahi, no en la sesion (scikit-
+       learn, xgboost, pandas, statsmodels, seaborn, scipy, openpyxl).
+   [ ] Lee las secciones 1, 4, 5 y 6 del manual
+       (Practica_3_Series_Tiempo_ML_v6_ALUMNO.pdf).
+   [ ] Mira al menos el video de Rob Mulla (23 min):
+       https://youtu.be/vV12dGe_Fho
+   Si llegas sin haber leido, no te va a dar el tiempo.
+
+4. QUE TRAER
+   - Laptop con navegador y tu cuenta de Google (Colab), o tu usuario del
+     JupyterHub del laboratorio.
+   - La carpeta P3_SeriesTiempo_v6 ya preparada (apartado 3).
+   - FALLA COMUN: subir a Drive solo los cuadernos. Sin la carpeta datos/
+     el Bloque 0 no encuentra nada y se detiene con un mensaje claro.
+
+5. COMO SE REPARTEN LAS 2 HORAS
+   Fase  Cuaderno                                   Minutos
+   ----  -----------------------------------------  -------
+    0    P3_E1 (Bloque 0 y Fase 0): versiones, MD5        5
+    1    P3_E1  Replica del video (PJME)                 25
+    2    P3_E2  Datos de la estacion y caracteristicas   20
+    3    P3_E3  Particion temporal y lineas base         15
+    4    P3_E4  Modelos y ajuste de hiperparametros      30
+    5    P3_E5  Metricas, curvas y comparacion           25
+                                                   TOTAL 120
+    P    P3_E6  Extraclase (Anexo P) + reporte      ~10 horas
+
+6. LOS PRIMEROS 5 MINUTOS
+   - Abre P3_E1_Video_XGBoost_Energia_PJME.ipynb.
+   - Corre el Bloque 0 y la celda "Fase 0".
+   - Copia en la Tabla A: entorno, versiones, si hay GPU y los dos MD5.
+     Esperados:
+       PJME_hourly.csv                 5908f274ab73d5eaeb88654a8d238df3
+       DATOS_MENSUALES_EST_2038.xlsx   79db93f4acdb00dee34cdd85c70d62ad
+   - Si sale una X en algun MD5, avisa ANTES de seguir.
+
+7. REGLAS DE TRABAJO (no negociables)
+   - Corre las celdas EN ORDEN y los cuadernos EN ORDEN (E1 a E5): cada
+     etapa lee lo que guardo la anterior en resultados/artefactos/.
+   - No cambies la semilla (42) ni la particion: tus cifras deben poder
+     compararse con las de tus companeros y con la referencia.
+   - La prueba se mira UNA vez (Etapa 5). Si ajustas algo mirandola, ya no
+     es prueba.
+   - No borres resultados/: ahi quedan tus figuras, tablas y
+     registro_P3.json, que son evidencia de tu entrega.
+
+8. QUE TIENES QUE ENTREGAR
+   [ ] Los seis cuadernos ejecutados, con todas sus salidas visibles.
+   [ ] La carpeta resultados/ comprimida (con registro_P3.json).
+   [ ] El manual del alumno con las Tablas A a L y las trece figuras.
+   [ ] El reporte tipo articulo corto (IMRaD, 4 a 6 paginas) en PDF, con
+       el cuestionario y la declaracion de uso de IA.
+   La fecha y la forma de entrega estan en Classroom.
+
+9. LO QUE TE VA A CONFUNDIR
+   - En Colab cada cuaderno corre en OTRA maquina. Lo que guarda la Etapa 2
+     solo lo ve la Etapa 3 porque la carpeta vive en Drive. Por eso cada
+     cuaderno vuelve a montar Drive: autorizalo cada vez.
+   - Si la regla "la misma hora de ayer" tiene menos error que el XGBoost
+     del video, no concluyas que el modelo es malo: usan informacion
+     distinta y horizontes distintos. Comparalo con el perfil de calendario.
+   - En la lluvia mensual, scikit-learn puede darte un MAPE enorme (del
+     orden de 10^15). No es un error de programa: hay meses con 0 mm y el
+     MAPE divide entre ellos.
+     No lo reportes; usa MAE, RMSE y MASE.
+   - Un R2 positivo en la prueba no garantiza ganarle a la climatologia.
+     Mira la columna "habilidad vs. clim.", no el R2 solo.
+   - Tus cifras pueden diferir de las de un companero con otra version
+     (Colab trae scikit-learn 1.6.1; el JupyterHub, 1.8.0) hasta en el
+     primer decimal: lo bastante para invertir el orden XGBoost / Random
+     Forest o cambiar el signo de la habilidad. No es un error tuyo; se
+     califica tu razonamiento con tus cifras. Los conteos de la auditoria
+     de datos, en cambio, deben ser identicos.
+   - La prueba se abre UNA vez, en la Etapa 5. Antes de abrirla ya debes
+     haber elegido tu modelo con la validacion (Tabla G); la Tabla H dice
+     como le fue a esa eleccion, no sirve para cambiarla.
+   - Al minuto 120 deben estar: los cinco cuadernos corridos, las Tablas A
+     a I en borrador y las figuras guardadas. Pegar figuras, justificar y
+     responder el cuestionario se hace despues, en el extraclase.
+   - Colab borra todo al reciclar la sesion si trabajas fuera de Drive.
+     Descarga resultados/ comprimida antes de cerrar.
+
+10. SI QUIERES PROFUNDIZAR
+   - Forecasting: Principles and Practice (3a ed.), libro abierto:
+     https://otexts.com/fpp3/
+   - Metricas de regresion en scikit-learn (ancla #regression-metrics;
+     numerada 3.4.6 en la guia 1.9.1 consultada el 25-oct-2026):
+     https://scikit-learn.org/stable/modules/model_evaluation.html
+   - La segunda parte del video de Rob Mulla (rezagos anuales y validacion
+     cruzada temporal): https://youtu.be/z3ZnOW-S550
+   - Hewamalage, Ackermann y Bergmeir (2023), errores comunes al evaluar
+     pronosticos: https://doi.org/10.1007/s10618-022-00894-5
+
+Dudas: einzunza@uabc.edu.mx y el tablon de Classroom del curso.
+Actualizado: 2026-10-25 (v6)
+===============================================================================
