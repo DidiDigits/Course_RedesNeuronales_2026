@@ -401,5 +401,1022 @@
   "elegido_en_validacion": "XGBoost",
   "n_validacion": 155
  },
- "etapa4_duracion_min": 18.53
+ "etapa4_duracion_min": 18.53,
+ "etapa5_entorno": {
+  "entorno": "Jupyter local",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scikit-learn": "1.9.1",
+  "xgboost": "3.4.1",
+  "matplotlib": "3.11.2",
+  "seaborn": "0.13.2",
+  "statsmodels": "0.15.0",
+  "scipy": "1.18.1"
+ },
+ "etapa5": {
+  "elegido_en_validacion": "XGBoost",
+  "n_prueba": 155,
+  "huecos_calendario_prueba": [
+   "2014-04"
+  ],
+  "escala_mase": 20.5542,
+  "escala_mase_pares": 872,
+  "escala_mase_hasta": "2013-04",
+  "tabla_H": {
+   "Ingenuo": {
+    "n": 155.0,
+    "MSE": 1265.2081,
+    "RMSE": 35.5698,
+    "MAE": 21.6687,
+    "R2": -0.2992,
+    "RSS": 196107.252,
+    "MedAE": 8.98,
+    "MaxErr": 131.4,
+    "VarExp": -0.2992,
+    "sMAPE_%": 132.0418,
+    "MASE": 1.0542,
+    "Hab_clim": -0.9646,
+    "t_ajuste_s": null
+   },
+   "Ingenuo estacional": {
+    "n": 155.0,
+    "MSE": 1338.7388,
+    "RMSE": 36.5888,
+    "MAE": 22.2173,
+    "R2": -0.3747,
+    "RSS": 207504.5172,
+    "MedAE": 10.7,
+    "MaxErr": 123.9,
+    "VarExp": -0.3746,
+    "sMAPE_%": 128.3126,
+    "MASE": 1.0809,
+    "Hab_clim": -1.0788,
+    "t_ajuste_s": null
+   },
+   "Climatología": {
+    "n": 155.0,
+    "MSE": 644.0077,
+    "RMSE": 25.3773,
+    "MAE": 15.8035,
+    "R2": 0.3387,
+    "RSS": 99821.1937,
+    "MedAE": 7.647,
+    "MaxErr": 103.0814,
+    "VarExp": 0.3409,
+    "sMAPE_%": 120.4168,
+    "MASE": 0.7689,
+    "Hab_clim": 0.0,
+    "t_ajuste_s": null
+   },
+   "XGBoost": {
+    "n": 155.0,
+    "MSE": 655.7319,
+    "RMSE": 25.6073,
+    "MAE": 16.8435,
+    "R2": 0.3267,
+    "RSS": 101638.4378,
+    "MedAE": 10.1628,
+    "MaxErr": 99.0007,
+    "VarExp": 0.3272,
+    "sMAPE_%": 122.073,
+    "MASE": 0.8195,
+    "Hab_clim": -0.0182,
+    "t_ajuste_s": 0.02
+   },
+   "SVR": {
+    "n": 155.0,
+    "MSE": 715.9709,
+    "RMSE": 26.7576,
+    "MAE": 16.9639,
+    "R2": 0.2648,
+    "RSS": 110975.4897,
+    "MedAE": 8.3115,
+    "MaxErr": 106.79,
+    "VarExp": 0.2811,
+    "sMAPE_%": 123.0787,
+    "MASE": 0.8253,
+    "Hab_clim": -0.1117,
+    "t_ajuste_s": 0.024
+   },
+   "Random Forest": {
+    "n": 155.0,
+    "MSE": 649.2989,
+    "RMSE": 25.4813,
+    "MAE": 16.7085,
+    "R2": 0.3333,
+    "RSS": 100641.3275,
+    "MedAE": 9.8288,
+    "MaxErr": 99.6835,
+    "VarExp": 0.3335,
+    "sMAPE_%": 120.324,
+    "MASE": 0.8129,
+    "Hab_clim": -0.0082,
+    "t_ajuste_s": 0.275
+   }
+  },
+  "tabla_I": {
+   "XGBoost": {
+    "n_ajuste": 876.0,
+    "n_prueba": 155.0,
+    "RMSE_ajuste": 26.2045,
+    "RMSE_prueba": 25.6073,
+    "R2_ajuste": 0.3416,
+    "R2_prueba": 0.3267,
+    "cociente_RMSE": 0.9772
+   },
+   "SVR": {
+    "n_ajuste": 876.0,
+    "n_prueba": 155.0,
+    "RMSE_ajuste": 28.1467,
+    "RMSE_prueba": 26.7576,
+    "R2_ajuste": 0.2404,
+    "R2_prueba": 0.2648,
+    "cociente_RMSE": 0.9507
+   },
+   "Random Forest": {
+    "n_ajuste": 876.0,
+    "n_prueba": 155.0,
+    "RMSE_ajuste": 26.1215,
+    "RMSE_prueba": 25.4813,
+    "R2_ajuste": 0.3458,
+    "R2_prueba": 0.3333,
+    "cociente_RMSE": 0.9755
+   }
+  },
+  "ceros_prueba": 35,
+  "mape_rf": 7577231681045463.0,
+  "curva_aprendizaje_final": {
+   "XGBoost": {
+    "meses_medios": 438.0,
+    "RMSE_ajuste": 21.4225,
+    "RMSE_val": 29.0923,
+    "DE_val": 5.1382
+   },
+   "SVR": {
+    "meses_medios": 438.0,
+    "RMSE_ajuste": 24.2613,
+    "RMSE_val": 30.1544,
+    "DE_val": 5.9955
+   },
+   "Random Forest": {
+    "meses_medios": 438.0,
+    "RMSE_ajuste": 20.9322,
+    "RMSE_val": 29.2822,
+    "DE_val": 5.1586
+   }
+  },
+  "mejor_valor_curva_validacion": {
+   "XGBoost": 2.0,
+   "SVR": 10.0,
+   "Random Forest": 3.0
+  }
+ },
+ "etapa5_duracion_min": 23.2,
+ "etapa6_entorno": {
+  "entorno": "Jupyter local",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scikit-learn": "1.9.1",
+  "xgboost": "3.4.1",
+  "matplotlib": "3.11.2",
+  "seaborn": "0.13.2",
+  "statsmodels": "0.15.0",
+  "scipy": "1.18.1"
+ },
+ "etapa6": {
+  "tabla_J": {
+   "Climatología": {
+    "RMSE_mean": 28.678,
+    "RMSE_std": 6.057,
+    "MAE_mean": 15.674,
+    "MAE_std": 2.168,
+    "MASE_mean": 0.894,
+    "MASE_std": 0.09,
+    "Hab_clim_mean": 0.0,
+    "Hab_clim_std": 0.0
+   },
+   "Ingenuo": {
+    "RMSE_mean": 37.615,
+    "RMSE_std": 6.514,
+    "MAE_mean": 20.639,
+    "MAE_std": 3.003,
+    "MASE_mean": 1.175,
+    "MASE_std": 0.122,
+    "Hab_clim_mean": -0.748,
+    "Hab_clim_std": 0.193
+   },
+   "Ingenuo estacional": {
+    "RMSE_mean": 40.381,
+    "RMSE_std": 8.208,
+    "MAE_mean": 21.617,
+    "MAE_std": 3.432,
+    "MASE_mean": 1.232,
+    "MASE_std": 0.159,
+    "Hab_clim_mean": -0.99,
+    "Hab_clim_std": 0.088
+   },
+   "Random Forest": {
+    "RMSE_mean": 29.302,
+    "RMSE_std": 5.916,
+    "MAE_mean": 16.777,
+    "MAE_std": 1.937,
+    "MASE_mean": 0.958,
+    "MASE_std": 0.081,
+    "Hab_clim_mean": -0.048,
+    "Hab_clim_std": 0.063
+   },
+   "SVR": {
+    "RMSE_mean": 30.302,
+    "RMSE_std": 6.718,
+    "MAE_mean": 17.16,
+    "MAE_std": 2.314,
+    "MASE_mean": 0.979,
+    "MASE_std": 0.11,
+    "Hab_clim_mean": -0.113,
+    "Hab_clim_std": 0.102
+   },
+   "XGBoost": {
+    "RMSE_mean": 29.092,
+    "RMSE_std": 5.745,
+    "MAE_mean": 16.431,
+    "MAE_std": 1.687,
+    "MASE_mean": 0.939,
+    "MASE_std": 0.087,
+    "Hab_clim_mean": -0.035,
+    "Hab_clim_std": 0.04
+   }
+  },
+  "p1_duracion_s": 11.9,
+  "p1_hiperparametros_por_pliegue": [
+   {
+    "pliegue": 1,
+    "modelo": "XGBoost",
+    "learning_rate": 0.03,
+    "max_depth": 2,
+    "n_estimators": 100
+   },
+   {
+    "pliegue": 1,
+    "modelo": "SVR",
+    "C": 1,
+    "epsilon": 0.3,
+    "gamma": "scale"
+   },
+   {
+    "pliegue": 1,
+    "modelo": "Random Forest",
+    "max_depth": 5,
+    "min_samples_leaf": 5,
+    "n_estimators": 200
+   },
+   {
+    "pliegue": 2,
+    "modelo": "XGBoost",
+    "learning_rate": 0.03,
+    "max_depth": 2,
+    "n_estimators": 100
+   },
+   {
+    "pliegue": 2,
+    "modelo": "SVR",
+    "C": 10,
+    "epsilon": 0.3,
+    "gamma": 0.01
+   },
+   {
+    "pliegue": 2,
+    "modelo": "Random Forest",
+    "max_depth": 3,
+    "min_samples_leaf": 5,
+    "n_estimators": 200
+   },
+   {
+    "pliegue": 3,
+    "modelo": "XGBoost",
+    "learning_rate": 0.03,
+    "max_depth": 2,
+    "n_estimators": 100
+   },
+   {
+    "pliegue": 3,
+    "modelo": "SVR",
+    "C": 1,
+    "epsilon": 0.3,
+    "gamma": "scale"
+   },
+   {
+    "pliegue": 3,
+    "modelo": "Random Forest",
+    "max_depth": null,
+    "min_samples_leaf": 5,
+    "n_estimators": 200
+   },
+   {
+    "pliegue": 4,
+    "modelo": "XGBoost",
+    "learning_rate": 0.03,
+    "max_depth": 2,
+    "n_estimators": 100
+   },
+   {
+    "pliegue": 4,
+    "modelo": "SVR",
+    "C": 10,
+    "epsilon": 0.3,
+    "gamma": 0.01
+   },
+   {
+    "pliegue": 4,
+    "modelo": "Random Forest",
+    "max_depth": null,
+    "min_samples_leaf": 5,
+    "n_estimators": 500
+   },
+   {
+    "pliegue": 5,
+    "modelo": "XGBoost",
+    "learning_rate": 0.03,
+    "max_depth": 2,
+    "n_estimators": 100
+   },
+   {
+    "pliegue": 5,
+    "modelo": "SVR",
+    "C": 1,
+    "epsilon": 0.3,
+    "gamma": "scale"
+   },
+   {
+    "pliegue": 5,
+    "modelo": "Random Forest",
+    "max_depth": null,
+    "min_samples_leaf": 5,
+    "n_estimators": 500
+   }
+  ],
+  "p1_por_pliegue": [
+   {
+    "pliegue": 1,
+    "método": "Ingenuo",
+    "n_ajuste": 146,
+    "n_eval": 146,
+    "desde": "1952-06",
+    "RMSE": 28.8976,
+    "MAE": 16.4578,
+    "MASE": 1.0974,
+    "Hab_clim": -0.8538
+   },
+   {
+    "pliegue": 1,
+    "método": "Ingenuo estacional",
+    "n_ajuste": 146,
+    "n_eval": 146,
+    "desde": "1952-06",
+    "RMSE": 30.5519,
+    "MAE": 16.7916,
+    "MASE": 1.1197,
+    "Hab_clim": -1.0722
+   },
+   {
+    "pliegue": 1,
+    "método": "Climatología",
+    "n_ajuste": 146,
+    "n_eval": 146,
+    "desde": "1952-06",
+    "RMSE": 21.2239,
+    "MAE": 12.8929,
+    "MASE": 0.8597,
+    "Hab_clim": 0.0
+   },
+   {
+    "pliegue": 1,
+    "método": "XGBoost",
+    "n_ajuste": 146,
+    "n_eval": 146,
+    "desde": "1952-06",
+    "RMSE": 21.9916,
+    "MAE": 14.0865,
+    "MASE": 0.9393,
+    "Hab_clim": -0.0737
+   },
+   {
+    "pliegue": 1,
+    "método": "SVR",
+    "n_ajuste": 146,
+    "n_eval": 146,
+    "desde": "1952-06",
+    "RMSE": 20.9076,
+    "MAE": 13.8169,
+    "MASE": 0.9213,
+    "Hab_clim": 0.0296
+   },
+   {
+    "pliegue": 1,
+    "método": "Random Forest",
+    "n_ajuste": 146,
+    "n_eval": 146,
+    "desde": "1952-06",
+    "RMSE": 21.7693,
+    "MAE": 14.4124,
+    "MASE": 0.961,
+    "Hab_clim": -0.0521
+   },
+   {
+    "pliegue": 2,
+    "método": "Ingenuo",
+    "n_ajuste": 292,
+    "n_eval": 146,
+    "desde": "1964-08",
+    "RMSE": 34.2994,
+    "MAE": 18.7545,
+    "MASE": 1.1793,
+    "Hab_clim": -0.7897
+   },
+   {
+    "pliegue": 2,
+    "método": "Ingenuo estacional",
+    "n_ajuste": 292,
+    "n_eval": 146,
+    "desde": "1964-08",
+    "RMSE": 35.6854,
+    "MAE": 20.1401,
+    "MASE": 1.2664,
+    "Hab_clim": -0.9372
+   },
+   {
+    "pliegue": 2,
+    "método": "Climatología",
+    "n_ajuste": 292,
+    "n_eval": 146,
+    "desde": "1964-08",
+    "RMSE": 25.639,
+    "MAE": 14.4322,
+    "MASE": 0.9075,
+    "Hab_clim": 0.0
+   },
+   {
+    "pliegue": 2,
+    "método": "XGBoost",
+    "n_ajuste": 292,
+    "n_eval": 146,
+    "desde": "1964-08",
+    "RMSE": 26.5533,
+    "MAE": 15.7426,
+    "MASE": 0.9899,
+    "Hab_clim": -0.0726
+   },
+   {
+    "pliegue": 2,
+    "método": "SVR",
+    "n_ajuste": 292,
+    "n_eval": 146,
+    "desde": "1964-08",
+    "RMSE": 27.7846,
+    "MAE": 16.1483,
+    "MASE": 1.0154,
+    "Hab_clim": -0.1744
+   },
+   {
+    "pliegue": 2,
+    "método": "Random Forest",
+    "n_ajuste": 292,
+    "n_eval": 146,
+    "desde": "1964-08",
+    "RMSE": 26.3349,
+    "MAE": 15.4882,
+    "MASE": 0.9739,
+    "Hab_clim": -0.055
+   },
+   {
+    "pliegue": 3,
+    "método": "Ingenuo",
+    "n_ajuste": 438,
+    "n_eval": 146,
+    "desde": "1976-10",
+    "RMSE": 38.4049,
+    "MAE": 23.7309,
+    "MASE": 1.3697,
+    "Hab_clim": -0.5838
+   },
+   {
+    "pliegue": 3,
+    "método": "Ingenuo estacional",
+    "n_ajuste": 438,
+    "n_eval": 146,
+    "desde": "1976-10",
+    "RMSE": 41.9546,
+    "MAE": 25.3324,
+    "MASE": 1.4621,
+    "Hab_clim": -0.8901
+   },
+   {
+    "pliegue": 3,
+    "método": "Climatología",
+    "n_ajuste": 438,
+    "n_eval": 146,
+    "desde": "1976-10",
+    "RMSE": 30.5167,
+    "MAE": 17.2654,
+    "MASE": 0.9965,
+    "Hab_clim": 0.0
+   },
+   {
+    "pliegue": 3,
+    "método": "XGBoost",
+    "n_ajuste": 438,
+    "n_eval": 146,
+    "desde": "1976-10",
+    "RMSE": 30.2594,
+    "MAE": 17.7282,
+    "MASE": 1.0232,
+    "Hab_clim": 0.0168
+   },
+   {
+    "pliegue": 3,
+    "método": "SVR",
+    "n_ajuste": 438,
+    "n_eval": 146,
+    "desde": "1976-10",
+    "RMSE": 33.949,
+    "MAE": 19.886,
+    "MASE": 1.1478,
+    "Hab_clim": -0.2376
+   },
+   {
+    "pliegue": 3,
+    "método": "Random Forest",
+    "n_ajuste": 438,
+    "n_eval": 146,
+    "desde": "1976-10",
+    "RMSE": 30.1431,
+    "MAE": 17.9097,
+    "MASE": 1.0337,
+    "Hab_clim": 0.0243
+   },
+   {
+    "pliegue": 4,
+    "método": "Ingenuo",
+    "n_ajuste": 584,
+    "n_eval": 146,
+    "desde": "1989-01",
+    "RMSE": 46.3125,
+    "MAE": 22.8479,
+    "MASE": 1.1796,
+    "Hab_clim": -0.5219
+   },
+   {
+    "pliegue": 4,
+    "método": "Ingenuo estacional",
+    "n_ajuste": 584,
+    "n_eval": 146,
+    "desde": "1989-01",
+    "RMSE": 52.534,
+    "MAE": 24.4097,
+    "MASE": 1.2603,
+    "Hab_clim": -0.9583
+   },
+   {
+    "pliegue": 4,
+    "método": "Climatología",
+    "n_ajuste": 584,
+    "n_eval": 146,
+    "desde": "1989-01",
+    "RMSE": 37.5404,
+    "MAE": 18.3118,
+    "MASE": 0.9454,
+    "Hab_clim": 0.0
+   },
+   {
+    "pliegue": 4,
+    "método": "XGBoost",
+    "n_ajuste": 584,
+    "n_eval": 146,
+    "desde": "1989-01",
+    "RMSE": 37.681,
+    "MAE": 18.3549,
+    "MASE": 0.9477,
+    "Hab_clim": -0.0075
+   },
+   {
+    "pliegue": 4,
+    "método": "SVR",
+    "n_ajuste": 584,
+    "n_eval": 146,
+    "desde": "1989-01",
+    "RMSE": 38.8209,
+    "MAE": 18.4568,
+    "MASE": 0.9529,
+    "Hab_clim": -0.0694
+   },
+   {
+    "pliegue": 4,
+    "método": "Random Forest",
+    "n_ajuste": 584,
+    "n_eval": 146,
+    "desde": "1989-01",
+    "RMSE": 37.8109,
+    "MAE": 19.3201,
+    "MASE": 0.9975,
+    "Hab_clim": -0.0145
+   },
+   {
+    "pliegue": 5,
+    "método": "Ingenuo",
+    "n_ajuste": 730,
+    "n_eval": 146,
+    "desde": "2001-03",
+    "RMSE": 40.1616,
+    "MAE": 21.4055,
+    "MASE": 1.0502,
+    "Hab_clim": -0.9901
+   },
+   {
+    "pliegue": 5,
+    "método": "Ingenuo estacional",
+    "n_ajuste": 730,
+    "n_eval": 146,
+    "desde": "2001-03",
+    "RMSE": 41.1798,
+    "MAE": 21.4095,
+    "MASE": 1.0504,
+    "Hab_clim": -1.0922
+   },
+   {
+    "pliegue": 5,
+    "método": "Climatología",
+    "n_ajuste": 730,
+    "n_eval": 146,
+    "desde": "2001-03",
+    "RMSE": 28.4694,
+    "MAE": 15.4698,
+    "MASE": 0.759,
+    "Hab_clim": 0.0
+   },
+   {
+    "pliegue": 5,
+    "método": "XGBoost",
+    "n_ajuste": 730,
+    "n_eval": 146,
+    "desde": "2001-03",
+    "RMSE": 28.9762,
+    "MAE": 16.2436,
+    "MASE": 0.7969,
+    "Hab_clim": -0.0359
+   },
+   {
+    "pliegue": 5,
+    "método": "SVR",
+    "n_ajuste": 730,
+    "n_eval": 146,
+    "desde": "2001-03",
+    "RMSE": 30.0482,
+    "MAE": 17.4928,
+    "MASE": 0.8582,
+    "Hab_clim": -0.114
+   },
+   {
+    "pliegue": 5,
+    "método": "Random Forest",
+    "n_ajuste": 730,
+    "n_eval": 146,
+    "desde": "2001-03",
+    "RMSE": 30.451,
+    "MAE": 16.7569,
+    "MASE": 0.8221,
+    "Hab_clim": -0.1441
+   }
+  ],
+  "tabla_K": [
+   {
+    "comparación": "XGBoost vs Climatología",
+    "pérdida": "cuadrática",
+    "n": 155,
+    "d_medio": 11.72416,
+    "DM_HLN": 0.43672,
+    "p": 0.66293,
+    "p_Holm": 1.0,
+    "p_HAC": 0.60235,
+    "L_NW": 4,
+    "p_LjungBox": 0.38013
+   },
+   {
+    "comparación": "XGBoost vs Ingenuo estacional",
+    "pérdida": "cuadrática",
+    "n": 155,
+    "d_medio": -683.00696,
+    "DM_HLN": -3.79217,
+    "p": 0.00021,
+    "p_Holm": 0.00128,
+    "p_HAC": 0.00055,
+    "L_NW": 4,
+    "p_LjungBox": 0.07742
+   },
+   {
+    "comparación": "SVR vs Climatología",
+    "pérdida": "cuadrática",
+    "n": 155,
+    "d_medio": 71.9632,
+    "DM_HLN": 1.69872,
+    "p": 0.09139,
+    "p_Holm": 0.36557,
+    "p_HAC": 0.09195,
+    "L_NW": 4,
+    "p_LjungBox": 0.78921
+   },
+   {
+    "comparación": "SVR vs Ingenuo estacional",
+    "pérdida": "cuadrática",
+    "n": 155,
+    "d_medio": -622.76792,
+    "DM_HLN": -3.48174,
+    "p": 0.00065,
+    "p_Holm": 0.00324,
+    "p_HAC": 0.00177,
+    "L_NW": 4,
+    "p_LjungBox": 0.16512
+   },
+   {
+    "comparación": "Random Forest vs Climatología",
+    "pérdida": "cuadrática",
+    "n": 155,
+    "d_medio": 5.29119,
+    "DM_HLN": 0.18246,
+    "p": 0.85546,
+    "p_Holm": 1.0,
+    "p_HAC": 0.81465,
+    "L_NW": 4,
+    "p_LjungBox": 0.2416
+   },
+   {
+    "comparación": "Random Forest vs Ingenuo estacional",
+    "pérdida": "cuadrática",
+    "n": 155,
+    "d_medio": -689.43993,
+    "DM_HLN": -3.85105,
+    "p": 0.00017,
+    "p_Holm": 0.0012,
+    "p_HAC": 0.00044,
+    "L_NW": 4,
+    "p_LjungBox": 0.0558
+   },
+   {
+    "comparación": "XGBoost vs Random Forest",
+    "pérdida": "cuadrática",
+    "n": 155,
+    "d_medio": 6.43297,
+    "DM_HLN": 0.52021,
+    "p": 0.60366,
+    "p_Holm": 1.0,
+    "p_HAC": 0.58029,
+    "L_NW": 4,
+    "p_LjungBox": 0.66997
+   },
+   {
+    "comparación": "XGBoost vs Climatología",
+    "pérdida": "absoluta",
+    "n": 155,
+    "d_medio": 1.04005,
+    "DM_HLN": 2.48885,
+    "p": 0.01388,
+    "p_Holm": 0.05552,
+    "p_HAC": 0.00707,
+    "L_NW": 4,
+    "p_LjungBox": 0.87468
+   },
+   {
+    "comparación": "XGBoost vs Ingenuo estacional",
+    "pérdida": "absoluta",
+    "n": 155,
+    "d_medio": -5.37374,
+    "DM_HLN": -3.1643,
+    "p": 0.00187,
+    "p_Holm": 0.01124,
+    "p_HAC": 0.00521,
+    "L_NW": 4,
+    "p_LjungBox": 0.21014
+   },
+   {
+    "comparación": "SVR vs Climatología",
+    "pérdida": "absoluta",
+    "n": 155,
+    "d_medio": 1.16045,
+    "DM_HLN": 1.80943,
+    "p": 0.07233,
+    "p_Holm": 0.217,
+    "p_HAC": 0.07091,
+    "L_NW": 4,
+    "p_LjungBox": 0.45716
+   },
+   {
+    "comparación": "SVR vs Ingenuo estacional",
+    "pérdida": "absoluta",
+    "n": 155,
+    "d_medio": -5.25334,
+    "DM_HLN": -3.01696,
+    "p": 0.00299,
+    "p_Holm": 0.01494,
+    "p_HAC": 0.01131,
+    "L_NW": 4,
+    "p_LjungBox": 0.03738
+   },
+   {
+    "comparación": "Random Forest vs Climatología",
+    "pérdida": "absoluta",
+    "n": 155,
+    "d_medio": 0.90499,
+    "DM_HLN": 1.78104,
+    "p": 0.07688,
+    "p_Holm": 0.217,
+    "p_HAC": 0.03109,
+    "L_NW": 4,
+    "p_LjungBox": 0.0619
+   },
+   {
+    "comparación": "Random Forest vs Ingenuo estacional",
+    "pérdida": "absoluta",
+    "n": 155,
+    "d_medio": -5.50879,
+    "DM_HLN": -3.31481,
+    "p": 0.00114,
+    "p_Holm": 0.008,
+    "p_HAC": 0.00387,
+    "L_NW": 4,
+    "p_LjungBox": 0.17725
+   },
+   {
+    "comparación": "XGBoost vs Random Forest",
+    "pérdida": "absoluta",
+    "n": 155,
+    "d_medio": 0.13506,
+    "DM_HLN": 0.51868,
+    "p": 0.60473,
+    "p_Holm": 0.60473,
+    "p_HAC": 0.5113,
+    "L_NW": 4,
+    "p_LjungBox": 0.03431
+   }
+  ],
+  "huecos_calendario_prueba": [
+   "2014-04"
+  ],
+  "p3": [
+   {
+    "pliegue": 1,
+    "prueba_desde": "2013-08-03",
+    "variante": "sólo calendario",
+    "arboles_usados": 721,
+    "rondas": 771,
+    "n_eval": 8760,
+    "RMSE_MW": 3739.056
+   },
+   {
+    "pliegue": 1,
+    "prueba_desde": "2013-08-03",
+    "variante": "calendario + rezagos",
+    "arboles_usados": 340,
+    "rondas": 390,
+    "n_eval": 8760,
+    "RMSE_MW": 3738.57
+   },
+   {
+    "pliegue": 2,
+    "prueba_desde": "2014-08-03",
+    "variante": "sólo calendario",
+    "arboles_usados": 686,
+    "rondas": 736,
+    "n_eval": 8760,
+    "RMSE_MW": 3715.732
+   },
+   {
+    "pliegue": 2,
+    "prueba_desde": "2014-08-03",
+    "variante": "calendario + rezagos",
+    "arboles_usados": 329,
+    "rondas": 379,
+    "n_eval": 8760,
+    "RMSE_MW": 3571.276
+   },
+   {
+    "pliegue": 3,
+    "prueba_desde": "2015-08-03",
+    "variante": "sólo calendario",
+    "arboles_usados": 344,
+    "rondas": 394,
+    "n_eval": 8760,
+    "RMSE_MW": 3921.631
+   },
+   {
+    "pliegue": 3,
+    "prueba_desde": "2015-08-03",
+    "variante": "calendario + rezagos",
+    "arboles_usados": 332,
+    "rondas": 382,
+    "n_eval": 8760,
+    "RMSE_MW": 3661.065
+   },
+   {
+    "pliegue": 4,
+    "prueba_desde": "2016-08-02",
+    "variante": "sólo calendario",
+    "arboles_usados": 581,
+    "rondas": 631,
+    "n_eval": 8760,
+    "RMSE_MW": 4020.64
+   },
+   {
+    "pliegue": 4,
+    "prueba_desde": "2016-08-02",
+    "variante": "calendario + rezagos",
+    "arboles_usados": 453,
+    "rondas": 503,
+    "n_eval": 8760,
+    "RMSE_MW": 4153.206
+   },
+   {
+    "pliegue": 5,
+    "prueba_desde": "2017-08-03",
+    "variante": "sólo calendario",
+    "arboles_usados": 993,
+    "rondas": 1000,
+    "n_eval": 8760,
+    "RMSE_MW": 3951.838
+   },
+   {
+    "pliegue": 5,
+    "prueba_desde": "2017-08-03",
+    "variante": "calendario + rezagos",
+    "arboles_usados": 487,
+    "rondas": 537,
+    "n_eval": 8760,
+    "RMSE_MW": 3994.162
+   }
+  ],
+  "p3_duracion_s": 4.1,
+  "p3_resumen": {
+   "calendario + rezagos": {
+    "mean": 3823.7,
+    "std": 242.4
+   },
+   "sólo calendario": {
+    "mean": 3869.8,
+    "std": 135.1
+   }
+  },
+  "p4_demostracion": true,
+  "p4_elegido_en_validacion": "SVR",
+  "p4_escala_mase": 69258.1199,
+  "p4": {
+   "Ingenuo": {
+    "n": 450.0,
+    "RMSE": 62696.9109,
+    "MAE": 47732.66,
+    "MASE": 0.6892,
+    "R2": 0.6987,
+    "MAPE_%": 6.3277
+   },
+   "Ingenuo estacional": {
+    "n": 450.0,
+    "RMSE": 109449.541,
+    "MAE": 82361.9622,
+    "MASE": 1.1892,
+    "R2": 0.0819,
+    "MAPE_%": 10.6957
+   },
+   "Climatología estacional": {
+    "n": 450.0,
+    "RMSE": 110297.8477,
+    "MAE": 92368.9308,
+    "MASE": 1.3337,
+    "R2": 0.0676,
+    "MAPE_%": 12.4014
+   },
+   "XGBoost": {
+    "n": 450.0,
+    "RMSE": 49456.3766,
+    "MAE": 37127.2432,
+    "MASE": 0.5361,
+    "R2": 0.8125,
+    "MAPE_%": 4.8446
+   },
+   "SVR": {
+    "n": 450.0,
+    "RMSE": 49192.3208,
+    "MAE": 37073.3348,
+    "MASE": 0.5353,
+    "R2": 0.8145,
+    "MAPE_%": 4.8201
+   },
+   "Random Forest": {
+    "n": 450.0,
+    "RMSE": 50797.7575,
+    "MAE": 37883.6538,
+    "MASE": 0.547,
+    "R2": 0.8022,
+    "MAPE_%": 4.9504
+   }
+  }
+ },
+ "etapa6_duracion_min": 90.49
 }
