@@ -401,7 +401,7 @@
   "elegido_en_validacion": "XGBoost",
   "n_validacion": 155
  },
- "etapa4_duracion_min": 10.4,
+ "etapa4_duracion_min": 27.7,
  "etapa5_entorno": {
   "entorno": "Jupyter local",
   "python": "3.12.15",
@@ -572,7 +572,7 @@
    "Random Forest": 3.0
   }
  },
- "etapa5_duracion_min": 9.23,
+ "etapa5_duracion_min": 26.77,
  "etapa6_entorno": {
   "entorno": "Jupyter local",
   "python": "3.12.15",
@@ -1418,5 +1418,5 @@
    }
   }
  },
- "etapa6_duracion_min": 8.25
+ "etapa6_duracion_min": 25.92
 }
