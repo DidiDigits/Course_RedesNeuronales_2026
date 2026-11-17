@@ -371,8 +371,8 @@
    "combinaciones": 12,
    "RMSE_val": 29.5721,
    "MAE_val": 16.6502,
-   "t_rejilla_s": 0.437,
-   "t_ajuste_s": 0.02
+   "t_rejilla_s": 0.395,
+   "t_ajuste_s": 0.026
   },
   "SVR": {
    "params": {
@@ -383,8 +383,8 @@
    "combinaciones": 27,
    "RMSE_val": 30.2742,
    "MAE_val": 17.3059,
-   "t_rejilla_s": 0.413,
-   "t_ajuste_s": 0.024
+   "t_rejilla_s": 0.414,
+   "t_ajuste_s": 0.02
   },
   "Random Forest": {
    "params": {
@@ -395,13 +395,13 @@
    "combinaciones": 12,
    "RMSE_val": 29.8331,
    "MAE_val": 16.9529,
-   "t_rejilla_s": 2.571,
-   "t_ajuste_s": 0.275
+   "t_rejilla_s": 2.502,
+   "t_ajuste_s": 0.274
   },
   "elegido_en_validacion": "XGBoost",
   "n_validacion": 155
  },
- "etapa4_duracion_min": 18.53,
+ "etapa4_duracion_min": 10.4,
  "etapa5_entorno": {
   "entorno": "Jupyter local",
   "python": "3.12.15",
@@ -482,7 +482,7 @@
     "sMAPE_%": 122.073,
     "MASE": 0.8195,
     "Hab_clim": -0.0182,
-    "t_ajuste_s": 0.02
+    "t_ajuste_s": 0.026
    },
    "SVR": {
     "n": 155.0,
@@ -497,7 +497,7 @@
     "sMAPE_%": 123.0787,
     "MASE": 0.8253,
     "Hab_clim": -0.1117,
-    "t_ajuste_s": 0.024
+    "t_ajuste_s": 0.02
    },
    "Random Forest": {
     "n": 155.0,
@@ -512,7 +512,7 @@
     "sMAPE_%": 120.324,
     "MASE": 0.8129,
     "Hab_clim": -0.0082,
-    "t_ajuste_s": 0.275
+    "t_ajuste_s": 0.274
    }
   },
   "tabla_I": {
@@ -572,7 +572,7 @@
    "Random Forest": 3.0
   }
  },
- "etapa5_duracion_min": 23.2,
+ "etapa5_duracion_min": 9.23,
  "etapa6_entorno": {
   "entorno": "Jupyter local",
   "python": "3.12.15",
@@ -648,7 +648,7 @@
     "Hab_clim_std": 0.04
    }
   },
-  "p1_duracion_s": 11.9,
+  "p1_duracion_s": 11.7,
   "p1_hiperparametros_por_pliegue": [
    {
     "pliegue": 1,
@@ -1353,7 +1353,7 @@
     "RMSE_MW": 3994.162
    }
   ],
-  "p3_duracion_s": 4.1,
+  "p3_duracion_s": 4.2,
   "p3_resumen": {
    "calendario + rezagos": {
     "mean": 3823.7,
@@ -1418,5 +1418,5 @@
    }
   }
  },
- "etapa6_duracion_min": 90.49
+ "etapa6_duracion_min": 8.25
 }

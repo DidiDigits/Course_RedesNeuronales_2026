@@ -8,8 +8,8 @@
   "combinaciones": 12,
   "RMSE_val": 29.5721,
   "MAE_val": 16.6502,
-  "t_rejilla_s": 0.437,
-  "t_ajuste_s": 0.02
+  "t_rejilla_s": 0.395,
+  "t_ajuste_s": 0.026
  },
  "SVR": {
   "params": {
@@ -20,8 +20,8 @@
   "combinaciones": 27,
   "RMSE_val": 30.2742,
   "MAE_val": 17.3059,
-  "t_rejilla_s": 0.413,
-  "t_ajuste_s": 0.024
+  "t_rejilla_s": 0.414,
+  "t_ajuste_s": 0.02
  },
  "Random Forest": {
   "params": {
@@ -32,8 +32,8 @@
   "combinaciones": 12,
   "RMSE_val": 29.8331,
   "MAE_val": 16.9529,
-  "t_rejilla_s": 2.571,
-  "t_ajuste_s": 0.275
+  "t_rejilla_s": 2.502,
+  "t_ajuste_s": 0.274
  },
  "elegido_en_validacion": "XGBoost",
  "n_validacion": 155
